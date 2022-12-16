@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he-IL">
+<head>
+    <meta charset="UTF-8">
+        <script defer src="../static/index.js"> </script>
+    <title>Bilinguals/translatorSignUp</title>
+    <link rel="stylesheet" type="text/css" href="../static/index1css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body class="loginBody">
+<div class="Container2">
+    <div class="sideLogo">
+        <img id="logo" src="../static/pics/logo.png" width=25%" height="100%" alt="">
+    </div>
+    <div class="signUpForm">
+        <form class="regSignForm" id="tranSignUp">
+            <div class="Headlines">
+                <h2>צור חשבון מתורגמן חדש</h2>
+                <br>
+                <p>אנא מלא את הפרטים הבאים כדי שנוכל ליצור לך חשבון חדש!</p>
+            </div>
+            <div class="msg"></div>
+            <div class="fillings">
+                 <label for="firstname"> שם פרטי </label>
+                <input type="text" id="firstname" placeholder="הכנס שם פרטי" required>
+                <label for="lastname"> שם משפחה</label>
+                <input type="text" id="lastname" placeholder="הכנס שם משפחה" required>
+                <label for="username"> שם משתמש </label>
+                <input type="text" id="username" placeholder="הכנס שם משתמש" required>
+                <label for="password"> סיסמה</label>
+                <input type="password" id="password" placeholder="הכנס סיסמה" required>
+                <label for="email">אימייל</label>
+                <input type="email" id="email" placeholder="הכנס כתובת מייל" required>
+                <label for="phoneNumber">טלפון</label>
+                <input type="tel" id="phoneNumber" placeholder="הכנס מספר טלפון" required>
+                <div class="select">
+                    <div class="sel1">
+                      <label for="erea">בחר אזור שירות:</label>
+                    <select id="erea" name="erea" required></option><option value="דרום">דרום</option> <option value="צפון">צפון</option> <option value="מרכז">מרכז</option> <option value="שפלה">שפלה</option> </select>
+                    </div>
+                    <div class="sel2">
+                       <label for="gender">מין:</label>
+                        <select id="gender" name="gender" required><option value="זכר">זכר</option> <option value="נקבה">נקבה</option><option value="מעדיפ/ה לא לענות">מעדיפ/ה לא לענות</option> </select>
+                    </div>
+                </div>
+                <br>
+                <div id="selectorTitles">
+                    <p> יש לבחור שתי שפות לפחות. <br>כדי לבחור יותר משפה אחת יש ללחוץ על מקש CTRL ולבחור תוך כדי. </p>
+                <div>
+                    <label for="languages">בחר שפת תרגום:</label>
+                    <select id="multiple-select" multiple required>
+                        <option value="עברית">עברית</option>
+                        <option value="אנגלית">אנגלית</option>
+                        <option value="צרפתית">צרפתית</option>
+                        <option value="רוסית">רוסית</option>
+                        <option value="מרוקאית">מרוקאית</option>
+                        <option value="סינית">סינית</option>
+                        <option value="אמהרית">אמהרית</option>
+                        <option value="טורקית">טורקית</option>
+                </select>
+                </div>
+                </div>
+
+            </div>
+            <div class="signPic">
+               <img src="../static/pics/signUpPic.png" width=17% height=100%>
+            </div>
+            <div class="subButton">
+                <button class="submit" type="submit">צור חשבון</button>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
