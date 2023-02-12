@@ -1,0 +1,64 @@
+ modules I installed:
+const express = require('express');
+const path = require('path'); 
+const bodyParser = require('body-parser);
+const mysql = require("mysql2");
+
+//route for creating tables 
+app.get("/createTables", createDB.createTables);
+
+//route for insert
+app.get("/insertTables", createDB.insertTables);
+
+//routes for showing all tables
+app.get("/showAllUsers", createDB.showUsers);
+app.get("/showAllTranslators", createDB.showTranslators);
+app.get("/showAllContacts", createDB.showContacts);
+app.get("/showAllRequests", createDB.showRequests);
+
+//route for dropping tables  
+app.get("/dropcontacts", createDB.dropContacts);
+app.get("/dropTranslators", createDB.dropTranslators);
+app.get("/dropRequests", createDB.dropRequests);
+app.get("/dropUsers", createDB.dropUsers);
+
+//table syntax:
+    const q1 = `CREATE TABLE IF NOT EXISTS users (
+        id INT NOT NULL AUTO_INCREMENT,
+        username VARCHAR(25) NOT NULL,
+        password VARCHAR(25) NOT NULL,
+        email VARCHAR(50) NOT NULL,
+        phoneNumber VARCHAR(15) NOT NULL,
+        joinDate datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    )`;
+    const q2 = `CREATE TABLE IF NOT EXISTS translators (
+        id int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+        username varchar(25) NOT NULL, 
+        firstname varchar(25) NOT NULL, 
+        lastname varchar(25) NOT NULL, 
+        password varchar(25) NOT NULL,  
+        email varchar(50) NOT NULL, 
+        joinDate date default(CURRENT_DATE), 
+        phoneNumber varchar(15) NOT NULL, 
+        erea varchar(25) NOT NULL, 
+        gender varchar(25) NOT NULL, 
+        languages varchar(50) NOT NULL
+    )`;
+        const q1 = `CREATE TABLE IF NOT EXISTS contacts (
+        id int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+        fullName varchar(25) NOT NULL, 
+        email varchar(50) NOT NULL, 
+        createdDate date default(CURRENT_DATE) NOT NULL, 
+        message varchar(500) NOT NULL 
+    )`;
+       const q1 = `CREATE TABLE IF NOT EXISTS requests  (
+        id int NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+        firstName varchar(25) NOT NULL, 
+        lastName varchar(25) NOT NULL, 
+        email varchar(50) NOT NULL, 
+        phoneNumber varchar(25) NOT NULL, 
+        createdDate date default(CURRENT_DATE) NOT NULL, 
+        dueDate date NOT NULL, 
+        details varchar(500) NOT NULL
+    )`;
